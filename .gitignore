@@ -1,0 +1,17 @@
+# python
+backend/.venv/
+backend/storage/
+backend/.env
+__pycache__/
+*.pyc
+
+# node
+frontend/node_modules/
+frontend/dist/
+
+# misc
+.DS_Store
+*.log
+
+# build caches
+frontend/*.tsbuildinfo

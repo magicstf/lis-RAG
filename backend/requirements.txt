@@ -1,0 +1,19 @@
+fastapi==0.162.0
+uvicorn[standard]==0.54.0
+sqlalchemy==2.0.57
+pydantic-settings==2.16.2
+python-multipart==0.0.33
+python-dotenv==1.2.4
+pypdf==6.21.4
+python-docx==1.2.0
+chromadb==1.5.9
+rank-bm25==0.2.2
+jieba==0.42.1
+openai==3.46.0
+httpx==0.28.1
+
+# Embedding default backend: ONNX via fastembed (no torch).
+# Windows: chromadb >= 1.0, onnxruntime >= 1.21 and torch >= 2.6 all need the
+# Microsoft Visual C++ 2022 Redistributable (x64, >= 14.40): https://aka.ms/vs/17/release/vc_redist.x64.exe
+fastembed==0.9.1
+onnxruntime==1.31.1

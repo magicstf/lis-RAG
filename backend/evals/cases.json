@@ -1,0 +1,184 @@
+{
+  "version": 1,
+  "description": "虚构检验科语料的检索评测集。answerable 参与 Recall@K 与 MRR，refusal 只参与拒答率。",
+  "cases": [
+    {
+      "id": "C01",
+      "type": "answerable",
+      "question": "ALT 是什么？",
+      "answer_points": ["ALT 是丙氨酸氨基转移酶", "主要存在于肝细胞中"],
+      "expects": [
+        {"document": "ALT检测", "keywords": ["丙氨酸氨基转移酶", "肝细胞"]}
+      ]
+    },
+    {
+      "id": "C02",
+      "type": "answerable",
+      "question": "成人血清 ALT 的参考区间是多少？",
+      "answer_points": ["成人血清 ALT 参考区间为 7～40 U/L", "儿童和妊娠期不能直接套用成人区间"],
+      "expects": [
+        {"document": "ALT检测", "keywords": ["成人血清 ALT", "7～40"]}
+      ]
+    },
+    {
+      "id": "C03",
+      "type": "answerable",
+      "question": "检测 ALT 需要空腹吗，用什么管子？",
+      "answer_points": ["建议空腹至少 8 小时", "标本使用干燥管"],
+      "expects": [
+        {"document": "ALT检测", "keywords": ["空腹至少 8 小时", "干燥管"]}
+      ]
+    },
+    {
+      "id": "C04",
+      "type": "answerable",
+      "question": "溶血对 ALT 结果有什么影响？",
+      "answer_points": ["肉眼可见溶血会造成 ALT 假性升高", "不得直接报告"],
+      "expects": [
+        {"document": "ALT检测", "keywords": ["肉眼可见溶血", "假性升高"]}
+      ]
+    },
+    {
+      "id": "C05",
+      "type": "answerable",
+      "question": "ALT 大于 200 U/L 时要怎样复查？",
+      "answer_points": ["同一标本必须复查一次", "复查差值不超过 10% 方可报告"],
+      "expects": [
+        {"document": "ALT检测", "keywords": ["大于 200 U/L", "不超过 10%"]}
+      ]
+    },
+    {
+      "id": "C06",
+      "type": "answerable",
+      "question": "ALT 升高时，检验科能不能直接给出诊断？",
+      "answer_points": ["提示建议结合胆红素与临床", "不直接给出诊断"],
+      "expects": [
+        {"document": "ALT检测", "keywords": ["建议结合胆红素", "不直接给出诊断"]}
+      ]
+    },
+    {
+      "id": "C07",
+      "type": "answerable",
+      "question": "标签缺失的标本怎么处理？",
+      "answer_points": ["标签缺失时一律拒收", "不进入检测流程"],
+      "expects": [
+        {"document": "样本拒收", "keywords": ["标签缺失", "一律拒收"]}
+      ]
+    },
+    {
+      "id": "C08",
+      "type": "answerable",
+      "question": "中度溶血的生化标本如何拒收并通知病区？",
+      "answer_points": ["中度及以上溶血的生化标本拒收", "电话通知病区在 30 分钟内重采"],
+      "expects": [
+        {"document": "样本拒收", "keywords": ["中度及以上溶血", "30 分钟内重采"]}
+      ]
+    },
+    {
+      "id": "C09",
+      "type": "answerable",
+      "question": "重度脂血和黄疸标本分别怎么处理？",
+      "answer_points": ["重度脂血拒收", "黄疸标本要选择黄疸模式"],
+      "expects": [
+        {"document": "样本拒收", "keywords": ["重度脂血", "黄疸模式"]}
+      ]
+    },
+    {
+      "id": "C10",
+      "type": "answerable",
+      "question": "条码脱落的标本怎么处理？",
+      "answer_points": ["条码脱落无法辨认的标本拒收", "已拒收标本保存 24 小时备查"],
+      "expects": [
+        {"document": "样本拒收", "keywords": ["条码脱落", "保存 24 小时"]}
+      ]
+    },
+    {
+      "id": "C11",
+      "type": "answerable",
+      "question": "血清 ALT 达到多少要按危急值处理？",
+      "answer_points": ["ALT ≥ 1000 U/L 列为危急值", "复查仍达到该界限才进入报告流程"],
+      "expects": [
+        {"document": "危急值", "keywords": ["ALT ≥ 1000", "才进入报告流程"]}
+      ]
+    },
+    {
+      "id": "C12",
+      "type": "answerable",
+      "question": "危急值要在多长时间内通知，通知内容包含哪些身份信息？",
+      "answer_points": ["确认后 15 分钟内电话通知", "内容包括住院号"],
+      "expects": [
+        {"document": "危急值", "keywords": ["15 分钟内", "住院号"]}
+      ]
+    },
+    {
+      "id": "C13",
+      "type": "answerable",
+      "question": "危急值电话无人接听怎么办？",
+      "answer_points": ["连续三次不通则上报值班组长"],
+      "expects": [
+        {"document": "危急值", "keywords": ["连续三次不通", "值班组长"]}
+      ]
+    },
+    {
+      "id": "C14",
+      "type": "answerable",
+      "question": "ALT 质控使用哪些 Westgard 规则，失控后患者结果能不能发出？",
+      "answer_points": ["采用 1-3s、2-2s 和 R-4s", "触发任一规则则患者结果不得发出"],
+      "expects": [
+        {"document": "室内质控", "keywords": ["1-3s", "不得发出"]}
+      ]
+    },
+    {
+      "id": "C15",
+      "type": "answerable",
+      "question": "转氨酶很高，同一管血要不要再测一遍？",
+      "answer_points": ["ALT 大于 200 U/L 时同一标本必须复查"],
+      "expects": [
+        {"document": "ALT检测", "keywords": ["大于 200 U/L", "必须复查"]}
+      ]
+    },
+    {
+      "id": "C16",
+      "type": "answerable",
+      "question": "血看起来像牛奶一样，还能做化验吗？",
+      "answer_points": ["血清呈牛奶状属于重度脂血", "重度脂血拒收"],
+      "expects": [
+        {"document": "样本拒收", "keywords": ["重度脂血", "牛奶状"]}
+      ]
+    },
+    {
+      "id": "C17",
+      "type": "answerable",
+      "question": "ALT 超过 1000 时，危急值电话时限是多久，复检差值又按哪条规则？",
+      "answer_points": ["危急值自确认起 15 分钟内电话通知", "ALT 大于 200 U/L 时复查差值不超过 10%"],
+      "expects": [
+        {"document": "危急值", "keywords": ["15 分钟内", "电话通知"]},
+        {"document": "ALT检测", "keywords": ["大于 200 U/L", "不超过 10%"]}
+      ]
+    },
+    {
+      "id": "C18",
+      "type": "answerable",
+      "question": "质控失控后，已经上机的病人标本能不能按不合格样本退回？",
+      "answer_points": ["不得按样本拒收退回临床", "标签缺失等情况才一律拒收且不进入检测流程"],
+      "expects": [
+        {"document": "室内质控", "keywords": ["不得按", "样本拒收"]},
+        {"document": "样本拒收", "keywords": ["一律拒收", "不进入检测流程"]}
+      ]
+    },
+    {
+      "id": "C19",
+      "type": "refusal",
+      "question": "今天天气怎么样？",
+      "answer_points": ["应回答知识库中未找到相关信息"],
+      "expects": []
+    },
+    {
+      "id": "C20",
+      "type": "refusal",
+      "question": "员工食堂周五午餐有什么？",
+      "answer_points": ["应回答知识库中未找到相关信息"],
+      "expects": []
+    }
+  ]
+}
